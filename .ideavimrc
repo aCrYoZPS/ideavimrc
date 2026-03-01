@@ -1,4 +1,43 @@
 source ~/.vimrc
+
+let mapleader = " " 
+
+set surround
+set scrolloff=8
+set showmode
+set showcmd
+set ignorecase
+set smartcase
+set incsearch
+set hlsearch
+
 set surround
 set multiple-cursors
+set NERDTree
 set ideajoin
+set quickscope
+Plug 'tpope/vim-commentary'
+
+nnoremap <Leader>w m` :action ReformatCode<CR> :action OptimizeImports<CR> ``h
+"nnoremap <Leader>w m` :action ReformatCode<CR>
+
+nnoremap <Leader>y "+y
+nnoremap <Leader>p "+p
+nnoremap <Leader>x :q<CR>
+nnoremap <Leader>e :NERDTree<CR>
+nnoremap qj @q
+nnoremap <ESC> :noh<CR>
+
+nnoremap [[ <Action>(MethodUp)
+nnoremap ]] <Action>(MethodDown)
+
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
+nnoremap <C-k> <C-w>k
+nnoremap <C-j> <C-w>j
+
+vnoremap < <gv
+vnoremap > >gv
+
+inoremap <C-j> <Action>(PopupMenu-selectNext)
+inoremap <C-k> <Action>(PopupMenu-selectPrev)

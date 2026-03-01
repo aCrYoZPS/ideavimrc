@@ -6,7 +6,6 @@ filetype on
 
 syntax on
 
-
 set number                     " Show current line number
 set relativenumber 
 
@@ -65,6 +64,9 @@ let mapleader = " " " map leader to Space
 :nnoremap <leader>w :w<CR>
 :nnoremap <leader>q :q<CR>
 
+:nnoremap <Tab> gt
+:nnoremap <S-Tab> gT
+
 set cursorline
 set nostartofline
 hi CursorLine cterm=underline
@@ -73,3 +75,11 @@ set undofile
  
 noremap <leader>y "+y
 noremap <leader>p "+p
+
+vnoremap J :m '>+1<CR>gv=gv 
+vnoremap K :m '<-2<CR>gv=gv
+" xnoremap <leader>p "_dp
+xnoremap d "_d
+nnoremap <C-a> ggVG
+nnoremap n nzzzv
+nnoremap N Nzzzv
